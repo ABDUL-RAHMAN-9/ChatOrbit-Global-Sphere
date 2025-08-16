@@ -1,7 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { Star } from 'lucide-react'
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react'; const Login = () =>
+import { SignIn } from '@clerk/clerk-react'; const Login = () =>
 {
   return (
     <div className='min-h-screen flex flex-col md:flex-row'>
@@ -32,14 +32,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-reac
       </div>
       {/* Right side :- Login  */}
       <div className="flex-1 flex items-center justify-center p-6 sm:p-10">
-        <header>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-        </header>
+        <SignIn />
       </div>
     </div>
   )
