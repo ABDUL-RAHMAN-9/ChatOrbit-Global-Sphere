@@ -1,6 +1,6 @@
 import logo from './logo.png'
-import sample_cover from './sample_cover.jpg'
-import sample_profile from './sample_profile3.jpg'
+import sample_cover from './sample_cover.png'
+import sample_profile from './sample_profile.jpg'
 import bgImage from './bgImage.png'
 import group_users from './group_users.png'
 import { Home, MessageCircle, Search, UserIcon, Users } from 'lucide-react'
@@ -26,9 +26,9 @@ export const menuItemsData = [
 export const dummyUserData = {
     "_id": "user_2zdFoZib5lNr614LgkONdD8WG32",
     "email": "admin@example.com",
-    "full_name": "John Warren",
-    "username": "john_warren",
-    "bio": "🌍 Dreamer | 📚 Learner | 🚀 Doer\r\nExploring life one step at a time.\r\n✨ Staying curious. Creating with purpose.",
+    "full_name": "Lyra Quinn",
+    "username": "lyra_quinn", 
+    "bio": "🔍 Analyst | 🧠 Learner | ✨ Creator\nExploring ideas that matter. Driven by curiosity and clarity.",
     "profile_picture": sample_profile,
     "cover_photo": sample_cover,
     "location": "New York, NY",
@@ -44,17 +44,17 @@ export const dummyUserData = {
 const dummyUser2Data = {
     ...dummyUserData,
     _id: "user_2",
-    username: "Richard Hendricks",
-    full_name: "Richard Hendricks",
-    profile_picture: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
+    username: "Harry Winslow", 
+    full_name: "harry_winslow",
+    profile_picture: "https://i.pinimg.com/736x/a5/72/61/a57261c967a93a6b6ab67eb37a854405.jpg",
 }
 
 const dummyUser3Data = {
     ...dummyUserData,
     _id: "user_3",
-    username: "alexa_james",
-    full_name: "Alexa james",
-    profile_picture: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop",
+    username: "sienna_blake",
+    full_name: "Sienna Blake",
+    profile_picture: "https://i.pinimg.com/736x/c1/75/de/c175de875a32f9a263d64aefb3e441f2.jpg",
 }
 
 export const dummyStoriesData = [
@@ -72,7 +72,7 @@ export const dummyStoriesData = [
         "_id": "688340046e4b42b685068a73",
         "user": dummyUserData,
         "content": "",
-        "media_url": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+        "media_url": "https://images.unsplash.com/photo-1567569957008-2b8f89095bb2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // car
         "media_type": "image",
         "background_color": "#4f46e5",
         "createdAt": "2025-07-25T08:27:48.134Z",
@@ -82,7 +82,7 @@ export const dummyStoriesData = [
         "_id": "68833fe96e4b42b685068a5e",
         "user": dummyUserData,
         "content": "",
-        "media_url": "https://videos.pexels.com/video-files/14447442/14447442-hd_1080_1920_30fps.mp4",
+        "media_url": "https://v1.pinimg.com/videos/mc/expMp4/82/71/a8/8271a8e2ef623e15e47d24c9c007021f_t1.mp4", // video
         "media_type": "video",
         "background_color": "#4f46e5",
         "createdAt": "2025-07-25T08:27:21.289Z",
@@ -91,8 +91,8 @@ export const dummyStoriesData = [
     {
         "_id": "68833e136e4b42b685068937",
         "user": dummyUserData,
-        "content": "",
-        "media_url": "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
+        "content": "", // team work img
+        "media_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // 
         "media_type": "image",
         "background_color": "#4f46e5",
         "createdAt": "2025-07-25T08:19:31.080Z",
@@ -125,9 +125,9 @@ export const dummyPostsData = [
     {
         "_id": "68773e977db16954a783839c",
         "user": dummyUserData,
-        "content": "We're a small #team with a big vision — working day and night to turn dreams into products, and #products into something people love.",
-        "image_urls": [
-            "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg"
+        "content": "A focused team with expansive goals—transforming ideas into products, and products into lasting love from users.",
+        "image_urls": [ // team work
+            "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ],
         "post_type": "text_with_image",
         "likes_count": [],
@@ -137,7 +137,7 @@ export const dummyPostsData = [
     {
         "_id": "686e6d0407845749500c24cd",
         "user": dummyUserData,
-        "content": "Unlock your potential—every small step counts. Stay consistent, stay focused, and trust the process. Growth takes time, but every day is a new chance to be better than yesterday. 🌱✨\r\n\r\n#Motivation #GrowthMindset #DailyInspiration #StayFocused #LevelUp #PositiveVibes #KeepGoing #SelfImprovement #MindsetMatters #SuccessJourney",
+        "content": "Your potential is waiting—progress is built in moments. Stay sharp, stay steady, and believe in the process. Every sunrise brings a new chance to level up. 🌞🌱\n#MotivationDaily #MindsetShift #KeepGoing #LevelUp #FocusForward #SuccessJourney #PositiveVibes #SmallStepsBigWins",
         "image_urls": [],
         "post_type": "text",
         "likes_count": [],
@@ -147,8 +147,7 @@ export const dummyPostsData = [
     {
         "_id": "686e6b21de877d29cf02e2a7",
         "user": dummyUserData,
-        "content": "This is a sample paragraph with some #hashtags like #socialmedia and #marketing. Let's find them!",
-        "image_urls": [],
+        "content": "Here's a quick snapshot of how #hashtags shape conversations—from #branding to #digitalstrategy. Let's uncover their impact!",        "image_urls": [],
         "post_type": "text",
         "likes_count": [],
         "createdAt": "2025-07-09T13:14:09.144Z",
@@ -158,7 +157,7 @@ export const dummyPostsData = [
         "_id": "686e3e47ba0cf0fecba19947",
         "user": dummyUserData,
         "content": "",
-        "image_urls": [
+        "image_urls": [ // swiss
             "https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg"
         ],
         "post_type": "image",
@@ -171,9 +170,9 @@ export const dummyPostsData = [
     {
         "_id": "686e39e86e0585e9e2e58dd3",
         "user": dummyUserData,
-        "content": "Finally , got the car !",
-        "image_urls": [
-            "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+        "content": "Bentley Continental GT. Power dressed in white.",
+        "image_urls": [ // car
+            "https://images.unsplash.com/photo-1567569957008-2b8f89095bb2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ],
         "post_type": "text_with_image",
         "likes_count": [],
