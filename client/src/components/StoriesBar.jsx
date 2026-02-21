@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { dummyStoriesData } from '../assets/assets'
 import { Plus } from 'lucide-react'
 import moment from 'moment'
+import StoryModal from './StoryModal'
 
 const StoriesBar = () =>
 {
     const [Stories, setStories] = useState([])
+    const [showModal, setShowModal] = useState(false)
+    const [viewStory, setViewStory] = useState(null)
 
     const fetchStories = async () =>
     {
@@ -19,7 +22,9 @@ const StoriesBar = () =>
     return (
         <div className='w-screen sm:w-[calc(100vw-240px)] lg:max-w-2xl no-scrollbar overflow-x-auto px-4'>
 
-            <div className='flex gap-4 pb-5'>
+            <div
+                onClick={() => setShowModal(true)}
+                className='flex gap-4 pb-5'>
                 {/* Add Story Card */}
                 <div className='rounded-lg shodow-sm min-w-30 max-w-30 max-h-40 aspect-[3/4] 
                 cursor-pointer hover:shodow-lg transition-all duration-200 border-2 border-dashed
@@ -43,10 +48,30 @@ const StoriesBar = () =>
                             />
                             <p className='absolute top-18 left-3 text-white/60 text-sm truncate max-w-24'>{story.content}</p>
                             <p className='text-white absolute bottom-1 right-2 z-10 text-xs'>{moment(story.createdAt).fromNow()}</p>
+                            {
+                                story.media_type !== 'text' && (
+                                    <div className='absolute inset-0 z-1 rounded-lg bg-black overflow-hidden'>
+                                        {
+                                            story.media_type === "image" ?
+                                                <img
+                                                    src={story.media_url} alt=''
+                                                    className='h-full w-full object-cover hover:scale-110 transition duration-500 opacity-70 hover:opacity-90'
+                                                />
+                                                :
+                                                <video
+                                                    src={story.media_url}
+                                                    className='h-full w-full object-cover hover:scale-110 transition duration-500 opacity-70 hover:opacity-90'
+                                                />
+                                        }
+                                    </div>
+                                )
+                            }
                         </div>
                     ))
                 }
             </div>
+            {/* {add story modal} */}
+            {showModal && <StoryModal setShowModal={setShowModal} fetchStories={fetchStories} />}
         </div>
     )
 }

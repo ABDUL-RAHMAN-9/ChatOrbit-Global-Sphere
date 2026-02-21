@@ -10,6 +10,7 @@ import CreatePost from './pages/CreatePost'
 import ChatBox from './pages/ChatBox'
 import { useUser } from '@clerk/clerk-react'     // Clerk hook for user authentication
 import Layout from './pages/Layout'
+import { Toaster } from 'react-hot-toast';
 
 // Main App component containing all route definitions
 const App = () =>
@@ -17,6 +18,7 @@ const App = () =>
   const { user } = useUser() // Get current authenticated user
   return (
     <>
+      <Toaster position='top-center' reverseOrder={false} />
       <Routes>
         {/* Root route: show Login if no user, otherwise show Layout */}
         <Route path='/' element={!user ? <Login /> : <Layout />}>
