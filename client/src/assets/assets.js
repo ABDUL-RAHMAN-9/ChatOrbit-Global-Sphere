@@ -1,16 +1,13 @@
 import logo from './logo.png'
-import sample_cover from './sample_cover.png'
-import sample_profile from './sample_profile.jpg'
-import bgImage from './bgImage.png'
+import my_profile from "./my_profile_img.png"
 import group_users from './group_users.png'
 import { Home, MessageCircle, Search, UserIcon, Users } from 'lucide-react'
 import sponsored_img from './sponsored_img.png'
+import cover_image from './sponsored_img_1.png'
 
 export const assets = {
     logo,
-    sample_cover,
-    sample_profile,
-    bgImage,
+    my_profile,
     group_users,
     sponsored_img
 }
@@ -24,22 +21,22 @@ export const menuItemsData = [
 ];
 
 export const dummyUserData = {
-    "_id": "user_2zdFoZib5lNr614LgkONdD8WG32",
-    "email": "admin@example.com",
-    "full_name": "Lyra Quinn",
-    "username": "lyra_quinn", 
-    "bio": "🔍 Analyst | 🧠 Learner | ✨ Creator\nExploring ideas that matter. Driven by curiosity and clarity.",
-    "profile_picture": sample_profile,
-    "cover_photo": sample_cover,
-    "location": "New York, NY",
-    "followers": ["user_2", "user_3"],
-    "following": ["user_2", "user_3"],
-    "connections": ["user_2", "user_3"],
-    "posts": [],
-    "is_verified": true,
-    "createdAt": "2025-07-09T09:26:59.231Z",
-    "updatedAt": "2025-07-21T06:56:50.017Z",
-}
+    _id: "user_2zdFoZib5lNr614LgkONdD8WG32",
+    email: "admin@example.com",
+    full_name: "Lyra Quinn",
+    username: "lyra_quinn",
+    bio: "🔍 Analyst | 🧠 Learner | ✨ Creator\nExploring ideas that matter. Driven by curiosity and clarity.",
+    profile_picture: my_profile,
+    cover_photo: cover_image,
+    location: "New York, NY",
+    followers: ["user_2", "user_3"],
+    following: ["user_2", "user_3"],
+    connections: ["user_2", "user_3"],
+    posts: [],
+    is_verified: true,
+    createdAt: "2025-07-09T09:26:59.231Z",
+    updatedAt: "2025-07-21T06:56:50.017Z",
+};
 
 const dummyUser2Data = {
     ...dummyUserData,
